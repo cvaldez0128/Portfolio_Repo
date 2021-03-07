@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import Duration from './components/DurationExercise'
 import Repetition from './components/RepetitionExercise'
+import Planking from './components/PlankingExercise'
 
 
 
@@ -46,7 +47,9 @@ export default class MenuScreen extends React.Component {
              
             ))}
 
-            <li><button>Planking</button></li>
+            <li><button onClick={() => this.setState({ currentScreen: PLANKING,
+           
+            })}>Planking</button></li>
             
           </ul>
           </>
@@ -76,6 +79,17 @@ export default class MenuScreen extends React.Component {
           </>
         )
         break
+      case PLANKING:
+        screen = (
+          <>
+          <Planking {...this.state.selectedItem}></Planking>
+          <div class="container">
+            <button onClick={() => this.setState({ currentScreen: MENU})}>
+              Back
+            </button>
+          </div>
+          </>
+        )
     }
     
     return screen

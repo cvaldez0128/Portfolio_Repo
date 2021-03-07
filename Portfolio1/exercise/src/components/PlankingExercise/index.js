@@ -4,11 +4,11 @@ export default class Planking extends React.Component {
     render() {
         return (
             <>
-            <p>LET'S WORK THAT CORE WITH SOME PLANKING!</p>
+            <h1>LET'S WORK THAT CORE WITH SOME PLANKING!</h1>
             <p id="display"></p>
             <div class="container">
-                <button id="startStop"></button>
-                <button id="reset"></button>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
             </div>
             </>
         )
