@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import Duration from './components/DurationExercise'
 import Repetition from './components/RepetitionExercise'
+import Planking from './components/Planking'
 
 
 const MENU = "menu"
@@ -71,6 +72,7 @@ export default class MenuScreen extends React.Component {
         )
         break
     }
+    
     return screen
      
     
