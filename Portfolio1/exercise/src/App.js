@@ -3,6 +3,7 @@ import './App.css';
 import Duration from './components/DurationExercise'
 import Repetition from './components/RepetitionExercise'
 import Planking from './components/PlankingExercise'
+import JumpingJacks from './components/JumpingJacks'
 
 
 
@@ -10,6 +11,7 @@ const MENU = "menu"
 const DURATION = "duration"
 const REPETITION = "repetition"
 const PLANKING = "planking"
+const JUMPINGJACKS = "jumpingjacks"
 
 
 export default class MenuScreen extends React.Component {
@@ -47,11 +49,11 @@ export default class MenuScreen extends React.Component {
              
             ))}
 
-            <li><button onClick={() => this.setState({ currentScreen: PLANKING,
-           
+            <li><button onClick={() => this.setState({ currentScreen: PLANKING
             })}>Planking</button></li>
 
-            <li><button>Workout Survey</button></li>
+            <li><button onClick={() => this.setState({ currentScreen: JUMPINGJACKS
+            })}>Jumping Jacks</button></li>
             
           </ul>
           </>
@@ -85,6 +87,18 @@ export default class MenuScreen extends React.Component {
         screen = (
           <>
           <Planking {...this.state.selectedItem}></Planking>
+          <div class="container">
+            <button onClick={() => this.setState({ currentScreen: MENU})}>
+              Back
+            </button>
+          </div>
+          </>
+        )
+        break
+      case JUMPINGJACKS:
+        screen = (
+          <>
+          <JumpingJacks {...this.state.selectedItem}></JumpingJacks>
           <div class="container">
             <button onClick={() => this.setState({ currentScreen: MENU})}>
               Back
