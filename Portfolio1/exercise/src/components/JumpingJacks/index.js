@@ -16,13 +16,13 @@ export default class JumpingJacks extends React.Component {
                     <p>JUMPING JACKS: {this.state.completedJump}</p>
                     <button onClick={() => this.setState((prevState, props) => ({
                         jumpCompleted: true,
-                        completedJump: prevState.jumpCompleted + 1,
+                        completedJump: prevState.completedJump + 1,
                     }))
                 }>JUMP</button>
 
                 <button onClick={() => this.setState((prevState, props) =>({
                     jumpCompleted: false,
-                    completedJump: prevState.jumpCompleted = 0,
+                    completedJump: prevState.completedJump = 0,
                 }))
                 }>RESET</button>
                 </div>
