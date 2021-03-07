@@ -8,6 +8,7 @@ import Planking from './components/Planking'
 const MENU = "menu"
 const DURATION = "duration"
 const REPETITION = "repetition"
+const PLANKING = "planking"
 
 export default class MenuScreen extends React.Component {
 
@@ -18,7 +19,8 @@ export default class MenuScreen extends React.Component {
   render() {
     let objects = [
       {objName: "Running"},
-      {objName: "Push Ups"}
+      {objName: "Push Ups"},
+      {objName: "Planking"}
     ]
     let screen 
     switch (this.state.currentScreen) {
@@ -41,6 +43,7 @@ export default class MenuScreen extends React.Component {
                 seletedItem: obj,
                 })}>Push Ups</button>
               </li>
+            
              
             ))}
           </ul>
