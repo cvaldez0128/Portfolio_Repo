@@ -8,6 +8,7 @@ import Repetition from './components/RepetitionExercise'
 const MENU = "menu"
 const DURATION = "duration"
 const REPETITION = "repetition"
+const PLANKING = "planking"
 
 
 export default class MenuScreen extends React.Component {
@@ -19,8 +20,8 @@ export default class MenuScreen extends React.Component {
   render() {
     let objects = [
       {objName: "Running"},
-      {objName: "Push Ups"},
-     ]
+      {objName: "Push Ups"}
+    ]
     let screen 
     switch (this.state.currentScreen) {
       case MENU:
@@ -42,7 +43,10 @@ export default class MenuScreen extends React.Component {
                 seletedItem: obj,
                 })}>Push Ups</button>
               </li>
+             
             ))}
+
+            <li><button>Planking</button></li>
             
           </ul>
           </>
