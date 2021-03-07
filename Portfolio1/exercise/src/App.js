@@ -50,6 +50,8 @@ export default class MenuScreen extends React.Component {
             <li><button onClick={() => this.setState({ currentScreen: PLANKING,
            
             })}>Planking</button></li>
+
+            <li><button>Workout Survey</button></li>
             
           </ul>
           </>
