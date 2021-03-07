@@ -2,13 +2,13 @@ import React from 'react'
 import './App.css';
 import Duration from './components/DurationExercise'
 import Repetition from './components/RepetitionExercise'
-import Planking from './components/Planking'
+
 
 
 const MENU = "menu"
 const DURATION = "duration"
 const REPETITION = "repetition"
-const PLANKING = "planking"
+
 
 export default class MenuScreen extends React.Component {
 
@@ -20,8 +20,7 @@ export default class MenuScreen extends React.Component {
     let objects = [
       {objName: "Running"},
       {objName: "Push Ups"},
-      {objName: "Planking"}
-    ]
+     ]
     let screen 
     switch (this.state.currentScreen) {
       case MENU:
@@ -43,9 +42,8 @@ export default class MenuScreen extends React.Component {
                 seletedItem: obj,
                 })}>Push Ups</button>
               </li>
-            
-             
             ))}
+            
           </ul>
           </>
         )
