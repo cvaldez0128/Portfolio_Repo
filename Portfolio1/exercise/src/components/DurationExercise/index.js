@@ -11,7 +11,7 @@ let seconds = 0;
        let hours = 0;
 
        let displaySeconds = 0;
-       let displayMinutes = 0;
+       let displayMinutes = 0; 
        let displayHours = 0;
 
        let interval = null;
